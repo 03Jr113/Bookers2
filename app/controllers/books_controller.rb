@@ -17,9 +17,23 @@ class BooksController < ApplicationController
   end
 
   def show
+    @detail = Book.find(params[:id])
   end
 
   def edit
+    @detail = Book.find(params[:id])
+  end
+  
+  def update
+    detail = Book.find(params[:id])
+    detail.update(book_params)
+    redirect_to book_path(detail.id)
+  end
+  
+  def destroy
+    detail = Book.find(params[:id])
+    detail.destroy
+    redirect_to books_path
   end
 
   private

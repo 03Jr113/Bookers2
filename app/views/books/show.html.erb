@@ -1,2 +1,21 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<%= render 'newpost', book: @book %>
+
+<div>
+  <h2>Book detail</h2>
+  <table>
+    <tbody>
+      <tr>
+        <td><%= @detail.title %></td>
+        <td><%= @detail.body %></td>
+        <% if @detail.user == current_user %>
+        <td>
+          <%= link_to 'Edit', edit_book_path(@detail) %>
+        </td>
+        <td>
+          <%= link_to 'Destroy', book_path(@detail), method: :delete %>
+        </td>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+</div>
