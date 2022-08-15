@@ -9,26 +9,7 @@
 </div>
 <% end %>
 
-<div>
-  <div>
-    <div>
-      <h2>New book</h2>
-      <%= form_with model: @book, url: '/books', method: :post do |f| %>
-        <div class="field">
-          <label for="book_title">Title</label><br>
-          <%= f.text_field :title, id:"book_title" %>
-        </div>
-        
-        <div class="field">
-          <label for="book_opinion">Opinion</label><br>
-          <%= f.text_area :body, id:"book_opinion" %>
-        </div>
-        
-        <div class="actions">
-          <%= f.submit 'Create Book' %>
-        </div>
-      <% end %>
-    </div>
+<%= render 'newpost', book: @book %>
     
     <div>
       <h2>Books</h2>
