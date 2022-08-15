@@ -12,7 +12,7 @@
           <%= link_to 'Edit', edit_book_path(@detail) %>
         </td>
         <td>
-          <%= link_to 'Destroy', book_path(@detail), method: :delete %>
+          <%= link_to 'Destroy', book_path(@detail), method: :delete, "data-confirm" => "本当に消しますか？" %>
         </td>
         <% end %>
       </tr>
