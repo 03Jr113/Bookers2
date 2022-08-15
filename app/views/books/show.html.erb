@@ -1,18 +1,18 @@
-<%= render 'newpost', book: @book %>
+<%= render 'newpost', book: @post_book %>
 
 <div>
   <h2>Book detail</h2>
   <table>
     <tbody>
       <tr>
-        <td><%= @detail.title %></td>
-        <td><%= @detail.body %></td>
-        <% if @detail.user == current_user %>
+        <td><%= @book.title %></td>
+        <td><%= @book.body %></td>
+        <% if @book.user == current_user %>
         <td>
-          <%= link_to 'Edit', edit_book_path(@detail) %>
+          <%= link_to 'Edit', edit_book_path(@book) %>
         </td>
         <td>
-          <%= link_to 'Destroy', book_path(@detail), method: :delete, "data-confirm" => "本当に消しますか？" %>
+          <%= link_to 'Destroy', book_path(@book), method: :delete, "data-confirm" => "本当に消しますか？" %>
         </td>
         <% end %>
       </tr>
