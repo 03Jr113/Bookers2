@@ -77,4 +77,6 @@ Rails.application.configure do
   config.hosts << "3b633c437ebc4e5691fc51d73738d902.vfs.cloud9.ap-northeast-1.amazonaws.com"
   
   config.active_job.queue_adapter = :inline
+  
+  config.web_console.allowed_ips = '123.48.66.31'
 end

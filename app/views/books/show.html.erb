@@ -5,6 +5,10 @@
   <table>
     <tbody>
       <tr>
+        <td>
+          <%= image_tag @book.user.get_profile_image(100, 100) %><br>
+          <%= link_to @book.user.name, user_path(@book) %>
+        </td>
         <td><%= @book.title %></td>
         <td><%= @book.body %></td>
         <% if @book.user == current_user %>
@@ -16,6 +20,7 @@
         </td>
         <% end %>
       </tr>
+      
     </tbody>
   </table>
 </div>

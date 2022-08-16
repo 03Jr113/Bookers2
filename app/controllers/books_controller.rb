@@ -2,12 +2,13 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.all
-    @post_book = Book.new
     @user = current_user
+    @post_book = Book.new
   end
 
   def create
     @books = Book.all
+    @user = current_user
     @post_book = Book.new(book_params)
     @post_book.user_id = current_user.id
     if @post_book.save
