@@ -1,5 +1,9 @@
 <%= render 'error_explanation', model: @post_book %>
 
-<%= render 'newpost', book: @post_book, user: @user %>
+<div class="container">
+  <div class="row">
+    <%= render 'newpost', book: @post_book, user: @user %>
     
-<%= render 'list', books: @books %>
+    <%= render 'list', books: @books %>
+  </div>
+</div>

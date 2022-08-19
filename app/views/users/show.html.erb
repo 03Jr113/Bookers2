@@ -1,5 +1,13 @@
+<% if flash[:notice] %>
+ <p id="notice">
+   <%= flash[:notice] %>
+ </p>
+<% end %>
 
-
-<%= render 'books/newpost', book: @post_book, user: @user %>
-
-<%= render 'books/list', books: @user_books %>
+<div class="container px-5">
+ <div class="row">
+  <%= render 'books/newpost', book: @post_book, user: @user %>
+  
+  <%= render 'books/list', books: @user_books %>
+ </div>
+</div>
